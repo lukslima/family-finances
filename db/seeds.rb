@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Category.destroy_all
+
+Category.create!([
+    { name: 'Food' },
+    { name: 'Fun' },
+    { name: 'Transport' },
+    { name: 'Home' }
+])
+
+p "Created #{Category.count} categories"
+
+
+Account.destroy_all
+
+Account.create!([
+    { name: 'Account1'},
+    { name: 'Account2'}
+])
+
+p "Created #{Account.count} accounts"
